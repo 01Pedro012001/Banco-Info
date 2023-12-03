@@ -62,6 +62,7 @@ $result = $conexao->query($sql);
             <th>Valor</th>
             <th>Data Pagamento</th>
             <th>Tipo Serviço</th>
+            <th>Funções</th>
         </tr>
     </thead>
     <tbody>

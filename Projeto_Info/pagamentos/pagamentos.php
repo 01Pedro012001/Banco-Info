@@ -38,35 +38,11 @@
 
     input[type="submit"] {
         background-color: #0366d6;
-        color: #fff;       
+        color: #fff;
         cursor: pointer;
     }
     
 </style>
-
-  
-
-
-<?php include '../conexao.php' ?>
-<form method="post" action="pagamentos.php">
-</form>
-<?php
-include '../conexao.php';
-
-$conexao->close();
-?>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
 <?php include '../conexao.php' ?>
 <form method="post" action="pagamentos.php">
     Tipo de Pagamento: <input type="text" name="tipo_pagamento"><br>
@@ -111,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         VALUES  
             ('$tipo_pagamento', '$valor', '$data_pagamento', '$servicos_id')";
     if ($conexao->query($sql) === TRUE) {
-        header("Location: listar.php");
+        header("Location: pagamentos.php");
     } else {
         echo "Erro: " . $conexao->error;
     }

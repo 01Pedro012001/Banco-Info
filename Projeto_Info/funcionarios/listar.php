@@ -56,6 +56,7 @@ $result = $conexao->query($sql);
             <th>Setor</E-mail></th>
             <th>Usuario</th>
             <th>Senha</th>
+            <th>Funções</th>
         </tr>
     </thead>
     <tbody>

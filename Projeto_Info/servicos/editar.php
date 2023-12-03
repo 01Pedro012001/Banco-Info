@@ -1,3 +1,38 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; 
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            width: 20%;
+            margin: 200px auto;
+            background-color: #fff; 
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        input[type="text"],
+        select,
+        input[type="submit"] {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: calc(100% - 16px);
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+        }
+    </style>
 <?php include '../conexao.php';
 
 
@@ -32,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$conexao->close();
+
 ?>
 
 <form method="post" action="editar.php">
@@ -51,11 +86,30 @@ $conexao->close();
                     FROM clientes";
             $result_servicos = $conexao->query($sql_clientes);
 
-            while ($row = $result_categorias->fetch_assoc()) {
+            while ($row = $result_servicos->fetch_assoc()) {
                 $cliente_id = $row['ID'];
                 $cliente_nome = $row['Nome'];
                 echo "<option value='$cliente_id'>$cliente_nome</option>";
             }
         ?>
     </select><br>
+    <label for="ID_Funcionarios">Funcionario:</label>
+    <select name="ID_Funcionarios" id="ID_Funcionarios">
+        <option value="">Selecionar Funcionario</option>
+        <?php
+        $sql_funcionario =
+            "SELECT ID, Nome
+                        FROM funcionarios";
+        $result_funcionario = $conexao->query($sql_funcionario);
+
+        while ($row = $result_funcionario->fetch_assoc()) {
+            $funcionario_id = $row['ID'];
+            $funcionario_nome = $row['Nome'];
+            echo "<option value='$funcionario_id'> $funcionario_nome</option>";
+        }
+        ?>
+
+    </select>
+    <br>
     <input type="submit" value="Salvar">
+    <?php $conexao->close(); ?>

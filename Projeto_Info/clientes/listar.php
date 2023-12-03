@@ -3,7 +3,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2; 
 }
-
 h1 {
     color: #333; 
 }
@@ -26,13 +25,13 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
 }
 
 tr:hover {
@@ -57,6 +56,7 @@ $result = $conexao->query($sql);
             <th>E-mail</E-mail></th>
             <th>Endereço</th>
             <th>Telefone</th>
+            <th>Funções</th>
         </tr>
     </thead>
     <tbody>

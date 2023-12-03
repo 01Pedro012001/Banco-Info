@@ -36,7 +36,7 @@ th {
 }
 
 tr:hover {
-    background-color: #f5f5f5; 
+    background-color: #f5f5f5;
 }
 </style>
 <?php
@@ -72,6 +72,7 @@ $result = $conexao->query($sql);
             <th>Data Conclusão</th>
             <th>Cliente</th>
             <th>Funcionario</th>
+            <th>Funções</th>
         </tr>
     </thead>
     <tbody>

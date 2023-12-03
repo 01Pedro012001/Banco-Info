@@ -1,3 +1,38 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; 
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            width: 20%;
+            margin: 200px auto;
+            background-color: #fff; 
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        input[type="text"],
+        select,
+        input[type="submit"] {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: calc(100% - 16px);
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+        }
+    </style>
 <?php
 include '../conexao.php';
 

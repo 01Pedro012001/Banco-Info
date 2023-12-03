@@ -35,7 +35,7 @@
         input,
         select,
         textarea {
-            width: calc(100% - 16px); 
+            width: calc(100% - 16px);
             margin-bottom: 10px;
             padding: 8px;
             box-sizing: border-box;
@@ -54,7 +54,7 @@
     }
 
     h1 {
-        color: #000000; 
+        color: #000000;
     }
 
     footer {
